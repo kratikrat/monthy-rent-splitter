@@ -63,7 +63,7 @@ The design of the app is simple and intuitive. It includes:
 
    Demo
 
-You can view a live demo of this app by visiting [Live Demo](https://kratikrat.github.io/monthy-rent-splitter/).  (Replace with your actual live demo link if available) .
+You can view a live demo of this app by visiting [Live Demo](https://kratikrat.github.io/monthy-rent-splitter/).  
 
 Acknowledgements
  RemixIcon :for the moon icon for the theme toggle.
