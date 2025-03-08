@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RentCalc</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="cursor"></div>
+    <div id="main">
+        <nav>
+            <h2>Rent Splitter</h2>
+            <i class="ri-moon-fill" id="theme-toggle" onclick="toggleTheme()"></i>
+        </nav>
+        <div class="rent">
+            <form id="rentForm">
+                <table>
+                    <tr>
+                        <td><label for="houseRent" id="label">House Rent</label></td>
+                        <td><input type="number" id="houseRent" name="houseRent" class="inp" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="food" id="label">Food</label></td>
+                        <td><input type="number" id="food" name="food" class="inp" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="electricity" id="label">Electricity</label></td>
+                        <td><input type="number" id="electricity" name="electricity" class="inp" required></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="water" id="label">Water</label></td>
+                        <td><input type="number" id="water" name="water" class="inp" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="internet" id="label">Internet</label></td>
+                        <td><input type="number" id="internet" name="internet" class="inp" required></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="maintenance" id="label">Maintenance</label></td>
+                        <td><input type="number" id="maintenance" name="maintenance" class="inp" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="groceries" id="label">Groceries</label></td>
+                        <td><input type="number" id="groceries" name="groceries" class="inp" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="numPeople" id="label">Number of People Sharing</label></td>
+                        <td><input type="number" id="numPeople" name="numPeople" class="inp" required></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn" onclick="calculate()"><i class="ri-calculator-line"></i> Calculate</button>
+                        </td>
+                        <td><button type="reset" class="btn"><i class="ri-reset-right-line"></i> Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <div id="result">Result:</div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; <span id="year"></span> Kratik Rathore. All rights reserved.</p>
+    </footer>
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="script.js"></script>
+</body>
+
+</html>

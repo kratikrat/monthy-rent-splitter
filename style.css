@@ -1,0 +1,224 @@
+/* Default Light Theme */
+:root {
+    --bg-color: #f4f6f9;
+    --text-color: #333;
+    --header-bg-color: #4c84af;
+    --button-bg-color: #4c84af;
+    --button-hover-bg-color: #174364;
+    --input-bg-color: #fff;
+    --input-border-color: #ccc;
+    --result-text-color: #4c84af;
+    --main-bg-color: #fff;
+    --cursor-color: #4c84af;
+    --result-box-color: #333;
+    --result-box-border: #333;
+    --footer-bg-color:#4c84af;
+    --footer-text-color:#fff;
+    /* Light theme background for the main div */
+}
+
+/* Dark Theme */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    --header-bg-color: #1c1c1c;
+    --button-bg-color: #333;
+    --button-hover-bg-color: #555;
+    --input-bg-color: #333;
+    --input-border-color: #555;
+    --result-text-color: #f5f5f5;
+    --main-bg-color: #333;
+    /* Dark theme background for the main div */
+    --cursor-color: #fff;
+    --result-box-color: #fff;
+    --result-box-border: #fff;
+    --footer-bg-color:#333;
+    --footer-text-color:#fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 2vw;
+    /* Using vw for font size */
+}
+
+#cursor {
+    height: 20px;
+    width: 20px;
+    background-color: var(--cursor-color);
+    border-radius: 50%;
+    position: fixed;
+    font-size: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+    font-weight: 800;
+}
+
+
+#main {
+    max-width: 90vw;
+    /* Adjusting max-width to 90% of the viewport width */
+    margin: 0 auto;
+    background-color: var(--main-bg-color);
+    border-radius: 1vw;
+    /* Border radius in vw */
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.1);
+    /* Box-shadow in vw */
+    padding: 2vw;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-bg-color);
+    color: white;
+    padding: 1.5vw;
+    border-radius: 1vw;
+    margin-bottom: 2vw;
+}
+
+nav h2 {
+    margin: 0;
+    font-size: 4vw;
+    /* Adjusting font size to vw */
+    text-transform: uppercase;
+}
+
+nav i {
+    font-size: 5vw;
+    /* Adjusting icon size to vw */
+    cursor: pointer;
+}
+
+.rent {
+    padding: 2vw;
+}
+
+table {
+    width: 100%;
+    margin-top: 2vw;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 1.2vw;
+    text-align: left;
+}
+
+td input {
+    width: 100%;
+    padding: 1.5vw;
+    border-radius: 3vw;
+    border: 0.5vw solid var(--input-border-color);
+    font-size: 2.5vw;
+    /* Adjusting font size */
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+}
+
+td label {
+    font-size: 2vw;
+    /* Adjusting font size */
+    margin-bottom: 1vw;
+    display: inline-block;
+}
+
+/* Default Button Styles */
+.btn {
+    background-color: var(--button-bg-color);
+    color: white;
+    padding: 1.2vw 2vw;
+    margin-top: 5vw;
+    font-size: 2.5vw;
+    border: none;
+    border-radius: 2.5vw;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
+}
+
+/* Button Hover with Shining Effect */
+.btn:hover {
+    background-color: var(--button-hover-bg-color);
+    box-shadow: 0 0 2vw 0.5vw var(--button-hover-bg-color);
+    /* Glowing effect with a different color */
+    transform: translateY(-0.2vw);
+    /* Slightly lift the button on hover */
+}
+
+/* Reset Button */
+button[type="reset"] {
+    background-color: #f44336;
+}
+
+button[type="reset"]:hover {
+    background-color: #e53935;
+    box-shadow: 0 0 2vw 0.5vw rgba(255, 0, 0, 0.6);
+}
+
+/* Transition Smoothness */
+.btn,
+button[type="reset"] {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#result {
+    margin-top: 5vw;
+    font-size: 3vw;
+    /* Adjusting font size */
+    color: var(--result-text-color);
+    font-weight: bold;
+    border: 0.3vw solid var(--result-box-border);
+    padding: 3vw 3vw;
+    line-height: 2;
+    border-radius: 2vw;
+    box-shadow: 0vw 1.04vw 0vw var(--result-box-color);
+
+}
+
+footer {
+    text-align: center;
+    padding: 0.15vw;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    margin-top: 2vw;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        font-size: 4vw;
+        /* Adjust font size for smaller screens */
+    }
+
+    #main {
+        padding: 4vw;
+        /* Adjust padding in main for smaller screens */
+    }
+
+    table {
+        font-size: 4vw;
+        /* Adjust table font size */
+    }
+
+    td {
+        padding: 4vw;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 2vw;
+        /* Adjust margin-bottom */
+    }
+}
